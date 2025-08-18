@@ -3,8 +3,7 @@ import type { ActionButton } from "@shared/entities/actionButton/actionButton";
 import Image from "@UI/Image/Image";
 import Button from "@UI/Button/Button";
 import AnimatedParallaxMouse from "@UI/AnimatedParallaxMouse/AnimatedParallaxMouse";
-import logoSymbolImg from "@img/logo-symbol.png";
-import logoSymbolImgWebp from "@img/logo-symbol.webp";
+import logoSymbolImg from "@img/logo-symbol.webp";
 
 interface HeroProps {
   id?: string;
@@ -22,14 +21,8 @@ const Hero = ({ id, title, actionButton }: HeroProps) => {
               src={logoSymbolImg}
               width={1588}
               height={1304}
-              classNameImg="w-full max-w-198.5"
-              isLazy={false}
-              sources={[
-                {
-                  srcSet: logoSymbolImgWebp,
-                  type: "webp",
-                },
-              ]}
+              loading="eager"
+              className="w-full max-w-198.5"
             />
           </div>
         </AnimatedParallaxMouse>

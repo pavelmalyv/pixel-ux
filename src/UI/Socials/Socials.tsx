@@ -21,7 +21,7 @@ const Item = ({ actionButton, logo }: ItemProps) => {
   return (
     <li>
       <ButtonIcon isFill isRounded {...actionButton}>
-        <Image {...logo} classNameImg="dark:brightness-0 dark:invert-100" />
+        <Image {...logo} className="dark:brightness-0 dark:invert-100" />
       </ButtonIcon>
     </li>
   );

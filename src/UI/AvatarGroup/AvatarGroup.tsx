@@ -34,7 +34,7 @@ const Item = ({ appImage }: ItemProps) => {
     <Avatar
       rounded
       stacked
-      img={({ className, ...props }) => <Image {...props} {...appImage} classNameImg={className} />}
+      img={({ className, ...props }) => <Image {...props} {...appImage} className={className} />}
     />
   );
 };

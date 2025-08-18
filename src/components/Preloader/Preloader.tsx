@@ -50,15 +50,15 @@ const Preloader = ({ children }: PreloaderProps) => {
               src="img/preloader-logo.svg"
               width={38}
               height={38}
-              isLazy={false}
-              classNameImg="w-[2.375em] animate-spin-loading dark:invert-100"
+              loading="eager"
+              className="w-[2.375em] animate-spin-loading dark:invert-100"
             />
             <Image
               src="img/preloader-logo-text.svg"
               width={109}
               height={24}
-              isLazy={false}
-              classNameImg="w-[6.8125em] dark:invert-100"
+              loading="eager"
+              className="w-[6.8125em] dark:invert-100"
             />
           </div>
         </div>

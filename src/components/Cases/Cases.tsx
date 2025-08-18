@@ -2,7 +2,7 @@ import type { HeaderBlock } from "@shared/entities/headerBlock/headerBlock";
 import type { ActionButton } from "@shared/entities/actionButton/actionButton";
 import type { AppImage } from "@shared/entities/appImage/appImage";
 
-import { getScrollTriggerBase } from "@shared/config";
+import { breakpoints, getScrollTriggerBase } from "@shared/config";
 import { Swiper, SwiperSlide, type SwiperClass } from "swiper/react";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
@@ -13,9 +13,8 @@ import CasesSlide from "./CasesSlide";
 import ButtonIcon from "@UI/ButtonIcon/ButtonIcon";
 import ArrowBack from "@material-symbols/svg-400/outlined/arrow_back.svg?react";
 import ArrowForward from "@material-symbols/svg-400/outlined/arrow_forward.svg?react";
-import raysImg from "@img/rays.png";
-import raysImgWebp from "@img/rays.webp";
-import raysImgWebpXs from "@img/rays-xs.webp";
+import raysImg1530 from "@img/rays-1530.webp";
+import raysImg1040 from "@img/rays-1040.webp";
 import gsap from "gsap";
 
 interface CasesProps {
@@ -55,23 +54,12 @@ const Cases = ({ id, headerBlock, slides }: CasesProps) => {
       <div className="relative">
         <div className="absolute top-0 w-full flex justify-center bg-bg-primary">
           <Image
-            src={raysImg}
+            src={raysImg1530}
+            srcSet={`${raysImg1040} 1040w, ${raysImg1530} 1053w`}
             width={1530}
             height={1568}
-            sources={[
-              {
-                id: "0",
-                srcSet: raysImgWebpXs,
-                type: "webp",
-                media: "md",
-              },
-              {
-                id: "1",
-                srcSet: raysImgWebp,
-                type: "webp",
-              },
-            ]}
-            classNameImg="max-w-191 max-xl:max-w-160 max-md:max-w-130 w-full app-deco-blend"
+            sizes={`(max-width: ${breakpoints.md}px) 100vw, 764px`}
+            className="max-w-191 max-xl:max-w-160 max-md:max-w-130 w-full app-deco-blend"
           />
         </div>
         <div className="relative pt-22 max-xl:pt-18 max-md:pt-10">

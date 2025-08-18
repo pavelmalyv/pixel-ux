@@ -9,9 +9,8 @@ import Socials from "@UI/Socials/Socials";
 import Image from "@UI/Image/Image";
 import Favorite from "@material-symbols/svg-400/outlined/favorite.svg?react";
 import useMediaTheme from "@shared/hooks/useMediaTheme/useMediaTheme";
-import bgBottomImg from "@img/bg-bottom.png";
-import bgBottomImgWebp from "@img/bg-bottom.webp";
-import bgBottomImgWebpXs from "@img/bg-bottom-xs.webp";
+import bgBottomImg1920 from "@img/bg-bottom-1920.webp";
+import bgBottomImg1152 from "@img/bg-bottom-1152.webp";
 
 interface FooterProps {
   callActionText: string;
@@ -43,23 +42,12 @@ const Footer = ({ callActionText, developer, menu, socials }: FooterProps) => {
     <>
       <div className="absolute left-0 right-0 bottom-0 z-(--z-base)">
         <Image
-          src={bgBottomImg}
-          width={1440}
-          height={724}
-          classNameImg="w-full max-md:w-[140%] max-md:max-w-none max-h-220 2xl:max-h-280 max-md:max-h-150 object-cover object-top"
-          sources={[
-            {
-              id: "0",
-              srcSet: bgBottomImgWebpXs,
-              type: "webp",
-              media: "md",
-            },
-            {
-              id: "1",
-              srcSet: bgBottomImgWebp,
-              type: "webp",
-            },
-          ]}
+          src={bgBottomImg1920}
+          srcSet={`${bgBottomImg1152} 1152w, ${bgBottomImg1920} 1920w`}
+          sizes="100vw"
+          width={1920}
+          height={1251}
+          className="w-full max-md:max-w-none max-h-220 2xl:max-h-280 max-md:max-h-150 object-cover object-top"
         />
       </div>
       <div className="relative py-19 max-xl:py-15 max-md:py-8 app-container z-(--z-layer-1)">
