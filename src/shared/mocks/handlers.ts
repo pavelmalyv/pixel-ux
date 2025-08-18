@@ -28,7 +28,6 @@ export const handlers = [
               src: "icons/sun.svg",
               width: 24,
               height: 24,
-              alt: "",
             },
           },
           {
@@ -39,7 +38,6 @@ export const handlers = [
               src: "icons/star.svg",
               width: 24,
               height: 24,
-              alt: "",
             },
           },
           {
@@ -50,7 +48,6 @@ export const handlers = [
               src: "icons/screen.svg",
               width: 24,
               height: 24,
-              alt: "",
             },
           },
           {
@@ -61,13 +58,11 @@ export const handlers = [
               src: "icons/bag.svg",
               width: 24,
               height: 24,
-              alt: "",
             },
             appImage: {
               src: "img/about/custom-dev.jpg",
               width: 476,
               height: 514,
-              alt: "",
               sources: [
                 {
                   srcSet: "img/about/custom-dev.webp",
@@ -85,11 +80,9 @@ export const handlers = [
               src: "icons/webflow-logo.svg",
               width: 24,
               height: 24,
-              alt: "",
             },
             mainLogo: {
               src: "icons/webflow-logo-white.svg",
-              alt: "",
             },
             mainLogoBackground: "#5B54FF",
           },
@@ -101,7 +94,6 @@ export const handlers = [
               src: "icons/development.svg",
               width: 24,
               height: 24,
-              alt: "",
             },
           },
         ],
@@ -120,21 +112,10 @@ export const handlers = [
               action: "#",
             },
             appImage: {
-              src: "img/cases/bord.jpg",
+              src: "img/cases/bord-1464.webp",
+              srcSet: "img/cases/bord-908.webp 908w, img/cases/bord-1464.webp 1464w",
               width: 1464,
               height: 1098,
-              alt: "",
-              sources: [
-                {
-                  srcSet: "img/cases/bord-xs.webp",
-                  type: "webp",
-                  media: "md",
-                },
-                {
-                  srcSet: "img/cases/bord.webp",
-                  type: "webp",
-                },
-              ],
             },
           },
           {
@@ -143,21 +124,10 @@ export const handlers = [
               action: "#",
             },
             appImage: {
-              src: "img/cases/broadlume.jpg",
+              src: "img/cases/broadlume-1464.webp",
+              srcSet: "img/cases/broadlume-908.webp 908w, img/cases/broadlume-1464.webp 1464w",
               width: 1464,
               height: 1098,
-              alt: "",
-              sources: [
-                {
-                  srcSet: "img/cases/broadlume-xs.webp",
-                  type: "webp",
-                  media: "md",
-                },
-                {
-                  srcSet: "img/cases/broadlume.webp",
-                  type: "webp",
-                },
-              ],
             },
           },
           {
@@ -166,21 +136,10 @@ export const handlers = [
               action: "#",
             },
             appImage: {
-              src: "img/cases/justix.jpg",
+              src: "img/cases/justix-1464.webp",
+              srcSet: "img/cases/justix-908.webp 908w, img/cases/justix-1464.webp 1464w",
               width: 1464,
               height: 1098,
-              alt: "",
-              sources: [
-                {
-                  srcSet: "img/cases/justix-xs.webp",
-                  type: "webp",
-                  media: "md",
-                },
-                {
-                  srcSet: "img/cases/justix.webp",
-                  type: "webp",
-                },
-              ],
             },
           },
           {
@@ -189,21 +148,10 @@ export const handlers = [
               action: "#",
             },
             appImage: {
-              src: "img/cases/icons.jpg",
+              src: "img/cases/icons-1464.webp",
+              srcSet: "img/cases/icons-908.webp 908w, img/cases/icons-1464.webp 1464w",
               width: 1464,
               height: 1098,
-              alt: "",
-              sources: [
-                {
-                  srcSet: "img/cases/icons-xs.webp",
-                  type: "webp",
-                  media: "md",
-                },
-                {
-                  srcSet: "img/cases/icons.webp",
-                  type: "webp",
-                },
-              ],
             },
           },
           {
@@ -212,21 +160,10 @@ export const handlers = [
               action: "#",
             },
             appImage: {
-              src: "img/cases/sayyes.jpg",
+              src: "img/cases/sayyes-1464.webp",
+              srcSet: "img/cases/sayyes-908.webp 908w, img/cases/sayyes-1464.webp 1464w",
               width: 1464,
               height: 1098,
-              alt: "",
-              sources: [
-                {
-                  srcSet: "img/cases/sayyes-xs.webp",
-                  type: "webp",
-                  media: "md",
-                },
-                {
-                  srcSet: "img/cases/sayyes.webp",
-                  type: "webp",
-                },
-              ],
             },
           },
           {
@@ -235,21 +172,10 @@ export const handlers = [
               action: "#",
             },
             appImage: {
-              src: "img/cases/bord.jpg",
+              src: "img/cases/bord-1464.webp",
+              srcSet: "img/cases/bord-908.webp 908w, img/cases/bord-1464.webp 1464w",
               width: 1464,
               height: 1098,
-              alt: "",
-              sources: [
-                {
-                  srcSet: "img/cases/bord-xs.webp",
-                  type: "webp",
-                  media: "md",
-                },
-                {
-                  srcSet: "img/cases/bord.webp",
-                  type: "webp",
-                },
-              ],
             },
           },
           {
@@ -258,21 +184,10 @@ export const handlers = [
               action: "#",
             },
             appImage: {
-              src: "img/cases/broadlume.jpg",
+              src: "img/cases/broadlume-1464.webp",
+              srcSet: "img/cases/broadlume-908.webp 908w, img/cases/broadlume-1464.webp 1464w",
               width: 1464,
               height: 1098,
-              alt: "",
-              sources: [
-                {
-                  srcSet: "img/cases/broadlume-xs.webp",
-                  type: "webp",
-                  media: "md",
-                },
-                {
-                  srcSet: "img/cases/broadlume.webp",
-                  type: "webp",
-                },
-              ],
             },
           },
           {
@@ -281,21 +196,10 @@ export const handlers = [
               action: "#",
             },
             appImage: {
-              src: "img/cases/justix.jpg",
+              src: "img/cases/justix-1464.webp",
+              srcSet: "img/cases/justix-908.webp 908w, img/cases/justix-1464.webp 1464w",
               width: 1464,
               height: 1098,
-              alt: "",
-              sources: [
-                {
-                  srcSet: "img/cases/justix-xs.webp",
-                  type: "webp",
-                  media: "md",
-                },
-                {
-                  srcSet: "img/cases/justix.webp",
-                  type: "webp",
-                },
-              ],
             },
           },
           {
@@ -304,21 +208,10 @@ export const handlers = [
               action: "#",
             },
             appImage: {
-              src: "img/cases/icons.jpg",
+              src: "img/cases/icons-1464.webp",
+              srcSet: "img/cases/icons-908.webp 908w, img/cases/icons-1464.webp 1464w",
               width: 1464,
               height: 1098,
-              alt: "",
-              sources: [
-                {
-                  srcSet: "img/cases/icons-xs.webp",
-                  type: "webp",
-                  media: "md",
-                },
-                {
-                  srcSet: "img/cases/icons.webp",
-                  type: "webp",
-                },
-              ],
             },
           },
           {
@@ -327,21 +220,10 @@ export const handlers = [
               action: "#",
             },
             appImage: {
-              src: "img/cases/sayyes.jpg",
+              src: "img/cases/sayyes-1464.webp",
+              srcSet: "img/cases/sayyes-908.webp 908w, img/cases/sayyes-1464.webp 1464w",
               width: 1464,
               height: 1098,
-              alt: "",
-              sources: [
-                {
-                  srcSet: "img/cases/sayyes-xs.webp",
-                  type: "webp",
-                  media: "md",
-                },
-                {
-                  srcSet: "img/cases/sayyes.webp",
-                  type: "webp",
-                },
-              ],
             },
           },
         ],
@@ -358,64 +240,29 @@ export const handlers = [
         reviewsText: "отзывов",
         avatars: [
           {
-            src: "img/reviews/author1.jpg",
+            src: "img/reviews/author1.webp",
             width: 100,
             height: 100,
-            alt: "",
-            sources: [
-              {
-                srcSet: "img/reviews/author1.webp",
-                type: "webp",
-              },
-            ],
           },
           {
-            src: "img/reviews/author2.jpg",
+            src: "img/reviews/author2.webp",
             width: 100,
             height: 100,
-            alt: "",
-            sources: [
-              {
-                srcSet: "img/reviews/author2.webp",
-                type: "webp",
-              },
-            ],
           },
           {
-            src: "img/reviews/author3.jpg",
+            src: "img/reviews/author3.webp",
             width: 100,
             height: 100,
-            alt: "",
-            sources: [
-              {
-                srcSet: "img/reviews/author3.webp",
-                type: "webp",
-              },
-            ],
           },
           {
-            src: "img/reviews/author4.jpg",
+            src: "img/reviews/author4.webp",
             width: 100,
             height: 100,
-            alt: "",
-            sources: [
-              {
-                srcSet: "img/reviews/author4.webp",
-                type: "webp",
-              },
-            ],
           },
           {
-            src: "img/reviews/author5.jpg",
+            src: "img/reviews/author5.webp",
             width: 100,
             height: 100,
-            alt: "",
-            sources: [
-              {
-                srcSet: "img/reviews/author5.webp",
-                type: "webp",
-              },
-            ],
           },
         ],
       },

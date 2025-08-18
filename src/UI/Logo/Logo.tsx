@@ -13,7 +13,7 @@ interface LogoProps {
 const Logo = ({ actionButton, image, onClick }: LogoProps) => {
   return (
     <ButtonBase {...actionButton} onClick={onClick}>
-      <Image {...image} classNameImg="w-42 max-w-none max-xl:w-38 max-md:w-34 dark:invert-100" />
+      <Image {...image} className="w-42 max-w-none max-xl:w-38 max-md:w-34 dark:invert-100" />
     </ButtonBase>
   );
 };

@@ -95,7 +95,7 @@ const ServicesItem = ({
           <div className="w-11 aspect-square flex items-center justify-center text-2xl rounded-sm bg-bg-primary">
             <Image
               {...iconImage}
-              classNameImg={classNames(styles.icon.base, styles.icon.variant[variant])}
+              className={classNames(styles.icon.base, styles.icon.variant[variant])}
             />
           </div>
           <h3 className="text-xl font-semibold">{title}</h3>
@@ -107,7 +107,7 @@ const ServicesItem = ({
             className="flex items-center justify-center h-full max-lg:w-full lg:max-h-54 max-lg:min-h-45 lg:aspect-square p-4 rounded-xs"
             style={{ backgroundColor: mainLogoBackground }}
           >
-            <Image {...mainLogo} classNameImg="w-23 aspect-square" />
+            <Image {...mainLogo} className="w-23 aspect-square" />
           </div>
         )}
 
@@ -115,7 +115,7 @@ const ServicesItem = ({
           <div className="relative h-full w-full max-lg:min-h-45">
             <Image
               {...appImage}
-              classNameImg="absolute inset-0 w-full h-full object-cover rounded-xs"
+              className="absolute inset-0 w-full h-full object-cover rounded-xs"
             />
           </div>
         )}

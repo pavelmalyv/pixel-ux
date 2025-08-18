@@ -5,15 +5,15 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useCountUp } from "react-countup";
+import { breakpoints } from "@shared/hooks/useMediaTheme/useMediaTheme";
 
 import AvatarGroup from "@UI/AvatarGroup/AvatarGroup";
 import Rating from "@UI/Rating/Rating";
 import SectionHeader from "@UI/SectionHeader/SectionHeader";
 import Image from "@UI/Image/Image";
 import AnimatedDigit from "@UI/AnimatedDigit/AnimatedDigit";
-import ringImg from "@img/ring.png";
-import ringImgWebp from "@img/ring.webp";
-import ringImgWebpXs from "@img/ring-xs.webp";
+import ringImg840 from "@img/ring-840.webp";
+import ringImg400 from "@img/ring-400.webp";
 import gsap from "gsap";
 
 interface AvatarImage {
@@ -135,14 +135,12 @@ const Reviews = ({
     >
       <div className="gsap-image absolute top-full -translate-y-[80%] bg-bg-primary">
         <Image
-          src={ringImg}
+          src={ringImg840}
+          srcSet={`${ringImg400} 400w, ${ringImg840} 840w`}
+          sizes={`(max-width: ${breakpoints.md}px) 200px, 420px`}
           width={1088}
           height={1344}
-          classNameImg="w-full max-w-105 max-2xl:max-w-90 max-md:max-w-50 app-deco-blend"
-          sources={[
-            { id: "0", srcSet: ringImgWebpXs, type: "webp", media: "md" },
-            { id: "1", srcSet: ringImgWebp, type: "webp" },
-          ]}
+          className="w-full max-w-105 max-2xl:max-w-90 max-md:max-w-50 app-deco-blend"
         />
       </div>
 

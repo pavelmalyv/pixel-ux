@@ -3,6 +3,7 @@ import type { AppImage } from "@shared/entities/appImage/appImage";
 
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
+import { breakpoints } from "@shared/config";
 
 import gsap from "gsap";
 import ButtonBase from "@UI/ButtonBase/ButtonBase";
@@ -38,7 +39,11 @@ const CasesSlide = ({ actionButton, appImage }: CasesSlideProps) => {
           <div ref={containerImageRef} className="overflow-hidden rounded-xs">
             <AnimatedParallaxMouse isDisabled={!isHoverMouse} strength={6}>
               <div className="gsap-image-wrapper">
-                <Image {...appImage} classNameImg="w-full" />
+                <Image
+                  {...appImage}
+                  className="w-full"
+                  sizes={`(max-width: ${breakpoints.md}px) 59vw, 42vw`}
+                />
               </div>
             </AnimatedParallaxMouse>
           </div>

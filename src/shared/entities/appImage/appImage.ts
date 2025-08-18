@@ -1,40 +1,24 @@
 export type AppImageDTO = {
   src?: string;
+  srcSet?: string;
   width?: number;
   height?: number;
   alt?: string;
   isLazy?: boolean;
-  sources?: {
-    srcSet?: string;
-    type?: "webp";
-    media?: "md";
-    width?: number;
-    height?: number;
-  }[];
 };
 
 export type AppImage = {
   src?: string;
+  srcSet?: string;
   width?: number;
   height?: number;
   alt?: string;
-  isLazy?: boolean;
-  sources?: {
-    id: string;
-    srcSet?: string;
-    type?: "webp";
-    media?: "md";
-    width?: number;
-    height?: number;
-  }[];
+  loading?: "lazy" | "eager";
 };
 
 export const adaptAppImageDTO = (dto: AppImageDTO): AppImage => {
   return {
     ...dto,
-    sources: dto.sources?.map((source, index) => ({
-      id: String(index),
-      ...source,
-    })),
+    loading: dto.isLazy ? "lazy" : "eager",
   };
 };
