@@ -5,7 +5,7 @@ import ButtonText from "@UI/ButtonText/ButtonText";
 
 interface MenuProps {
   variant?: "horizontal" | "vertical";
-  align?: "center" | "left" | "right";
+  align?: "center" | "left" | "right" | "rightLeftCenter";
   children: React.ReactNode;
 }
 
@@ -20,6 +20,7 @@ const Menu = ({ variant = "horizontal", align = "center", children }: MenuProps)
       center: "justify-center",
       left: "justify-start",
       right: "justify-end",
+      rightLeftCenter: "justify-end max-lg:justify-start max-md:justify-center",
     },
   };
 
