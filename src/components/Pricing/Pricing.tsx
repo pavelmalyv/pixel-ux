@@ -8,7 +8,6 @@ import { selectHeaderHeight } from "@modules/Header/store/headerSlice";
 import Button from "@UI/Button/Button";
 import SectionHeader from "@UI/SectionHeader/SectionHeader";
 import PricingService from "./PricingService";
-import useMediaTheme from "@shared/hooks/useMediaTheme/useMediaTheme";
 
 interface PricingProps {
   id?: string;
@@ -19,7 +18,6 @@ interface PricingProps {
 }
 
 const Pricing = ({ id, headerBlock, titleButton, actionButton, children }: PricingProps) => {
-  const isMaxLg = useMediaTheme("maxLg");
   const scrollTriggerId = useId();
   const headerHeight = useAppSelector(selectHeaderHeight);
 
@@ -40,7 +38,7 @@ const Pricing = ({ id, headerBlock, titleButton, actionButton, children }: Prici
                 <SectionHeader
                   {...headerBlock}
                   scrollTriggerId={scrollTriggerId}
-                  isMarginBottom={isMaxLg}
+                  isMarginBottom="maxLg"
                   align="left"
                 />
               </div>
