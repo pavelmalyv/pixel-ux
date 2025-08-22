@@ -25,6 +25,7 @@ import "swiper/css";
 async function enableMocking() {
   const { worker } = await import("@shared/mocks/browser");
   return worker.start({
+    onUnhandledRequest: "bypass",
     serviceWorker: {
       url: `${import.meta.env.BASE_URL}mockServiceWorker.js`,
     },
