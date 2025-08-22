@@ -118,7 +118,7 @@ const Reviews = ({
           <Image
             src={ringImg840}
             srcSet={`${ringImg400} 400w, ${ringImg840} 840w`}
-            sizes={`(max-width: ${getBreakpoint("maxMd")}px) 200px, 420px`}
+            sizes={`(max-width: ${getBreakpoint("maxMd")}rem) 200px, 420px`}
             width={1088}
             height={1344}
             className="w-full max-w-105 max-2xl:max-w-90 max-md:max-w-50 app-deco-blend"

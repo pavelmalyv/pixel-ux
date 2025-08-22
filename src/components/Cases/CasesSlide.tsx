@@ -42,7 +42,7 @@ const CasesSlide = ({ actionButton, appImage }: CasesSlideProps) => {
                 <Image
                   {...appImage}
                   className="w-full"
-                  sizes={`(max-width: ${getBreakpoint("maxMd")}px) 59vw, 42vw`}
+                  sizes={`(max-width: ${getBreakpoint("maxMd")}rem) 59vw, 42vw`}
                 />
               </div>
             </AnimatedParallaxMouse>
