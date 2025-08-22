@@ -6,7 +6,7 @@ interface SectionHeaderProps {
   titleSize?: "lg" | "md" | "sm";
   subtitle?: string;
   align?: "center" | "left";
-  isMarginBottom?: boolean;
+  isMarginBottom?: boolean | "maxLg";
   isAnimated?: boolean;
   scrollTriggerId?: string;
 }
@@ -29,6 +29,7 @@ const SectionHeader = ({
       },
       marginBottom: {
         true: "mb-12 max-md:mb-7",
+        maxLg: "max-lg:mb-12 max-md:mb-7",
         false: "",
       },
     },
@@ -39,12 +40,15 @@ const SectionHeader = ({
     },
   };
 
+  const marginBottomKey: "true" | "false" | "maxLg" =
+    isMarginBottom === true ? "true" : isMarginBottom === false ? "false" : "maxLg";
+
   return (
     <div
       className={classNames(
         styles.container.base,
         styles.container.align[align],
-        styles.container.marginBottom[isMarginBottom ? "true" : "false"],
+        styles.container.marginBottom[marginBottomKey],
       )}
     >
       <h2 className={styles.title[titleSize]}>
