@@ -113,7 +113,7 @@ const Reviews = ({
 
   return (
     <section id={id} className="app-section">
-      <div ref={containerRef} className="relative min-h-[calc(100vh_+_--spacing(325))]">
+      <div ref={containerRef} className="relative min-h-[calc(100vh_+_--spacing(230))]">
         <div className="absolute gsap-image top-0 translate-y-[50%] bg-bg-primary">
           <Image
             src={ringImg840}
