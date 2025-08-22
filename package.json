@@ -31,7 +31,6 @@
     "react-countup": "^6.5.3",
     "react-dom": "^19.1.0",
     "react-redux": "^9.2.0",
-    "react-responsive": "^10.0.1",
     "swiper": "^11.2.10",
     "tailwindcss": "^4.1.11",
     "zod": "^4.0.14"
