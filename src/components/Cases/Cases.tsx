@@ -59,7 +59,7 @@ const Cases = ({ id, headerBlock, slides }: CasesProps) => {
             srcSet={`${raysImg1040} 1040w, ${raysImg1530} 1053w`}
             width={1530}
             height={1568}
-            sizes={`(max-width: ${getBreakpoint("maxMd")}px) 100vw, 764px`}
+            sizes={`(max-width: ${getBreakpoint("maxMd")}rem) 100vw, 764px`}
             className="max-w-191 max-xl:max-w-160 max-md:max-w-130 w-full app-deco-blend"
           />
         </div>
@@ -96,13 +96,13 @@ const Cases = ({ id, headerBlock, slides }: CasesProps) => {
             speed={900}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             breakpoints={{
-              [getBreakpoint("xxl")]: {
+              [getBreakpoint("xxl", "px")]: {
                 slidesPerView: 2.5,
               },
-              [getBreakpoint("lg")]: {
+              [getBreakpoint("lg", "px")]: {
                 slidesPerView: 2,
               },
-              [getBreakpoint("sm")]: {
+              [getBreakpoint("sm", "px")]: {
                 slidesPerView: 1.5,
               },
             }}

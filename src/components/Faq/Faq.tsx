@@ -7,7 +7,6 @@ import { getScrollTriggerBase } from "@shared/utils/animations";
 import Accordion from "@UI/Accordion/Accordion";
 import SectionHeader from "@UI/SectionHeader/SectionHeader";
 import AnimatedScrollUp from "@UI/AnimatedScrollUp/AnimatedScrollUp";
-import useMediaTheme from "@shared/hooks/useMediaTheme/useMediaTheme";
 import gsap from "gsap";
 
 interface FaqProps {
@@ -17,7 +16,6 @@ interface FaqProps {
 }
 
 const Faq = ({ id, headerBlock, children }: FaqProps) => {
-  const isMediaMaxLg = useMediaTheme("maxLg");
   const accordionRef = useRef<HTMLDivElement>(null);
   const [timeline, setTimeline] = useState<GSAPTimeline | null>(null);
 
@@ -43,7 +41,7 @@ const Faq = ({ id, headerBlock, children }: FaqProps) => {
       className="relative app-section app-container flex lg:items-center gap-x-8 max-lg:flex-col"
     >
       <div className="lg:flex-[1_1_387px]">
-        <SectionHeader {...headerBlock} isMarginBottom={isMediaMaxLg} align="left" />
+        <SectionHeader {...headerBlock} isMarginBottom="maxLg" align="left" />
       </div>
       <div ref={accordionRef} className="lg:flex-[1_1_624px]">
         <AnimatedScrollUp timeline={timeline}>

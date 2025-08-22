@@ -8,7 +8,6 @@ import Menu from "@UI/Menu/Menu";
 import Socials from "@UI/Socials/Socials";
 import Image from "@UI/Image/Image";
 import Favorite from "@material-symbols/svg-400/outlined/favorite.svg?react";
-import useMediaTheme from "@shared/hooks/useMediaTheme/useMediaTheme";
 import bgBottomImg1920 from "@img/bg-bottom-1920.webp";
 import bgBottomImg1152 from "@img/bg-bottom-1152.webp";
 
@@ -28,15 +27,6 @@ interface FooterProps {
 
 const Footer = ({ callActionText, developer, menu, socials }: FooterProps) => {
   const { logo } = useLayoutContext();
-  const isMediaMaxLg = useMediaTheme("maxLg");
-  const isMediaMaxMd = useMediaTheme("maxMd");
-
-  let alignMenu: "center" | "left" | "right" = "right";
-  if (isMediaMaxMd) {
-    alignMenu = "center";
-  } else if (isMediaMaxLg) {
-    alignMenu = "left";
-  }
 
   return (
     <>
@@ -67,7 +57,7 @@ const Footer = ({ callActionText, developer, menu, socials }: FooterProps) => {
             </div>
           </div>
           <div className="flex flex-col items-end gap-y-23 max-lg:contents">
-            <Menu align={alignMenu}>
+            <Menu align="rightLeftCenter">
               {menu.map(({ id, ...props }) => (
                 <Menu.Item key={id} {...props} />
               ))}
