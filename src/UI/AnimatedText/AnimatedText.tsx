@@ -1,4 +1,4 @@
-import { getScrollTriggerBase } from "@shared/config";
+import { getScrollTriggerBase } from "@shared/utils/animations";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { SplitText } from "gsap/SplitText";

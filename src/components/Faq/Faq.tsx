@@ -2,7 +2,7 @@ import type { HeaderBlock } from "@shared/entities/headerBlock/headerBlock";
 
 import { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
-import { getScrollTriggerBase } from "@shared/config";
+import { getScrollTriggerBase } from "@shared/utils/animations";
 
 import Accordion from "@UI/Accordion/Accordion";
 import SectionHeader from "@UI/SectionHeader/SectionHeader";

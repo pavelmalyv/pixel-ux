@@ -2,7 +2,7 @@ import type { HeaderBlock } from "@shared/entities/headerBlock/headerBlock";
 import type { ActionButton } from "@shared/entities/actionButton/actionButton";
 import type { AppImage } from "@shared/entities/appImage/appImage";
 
-import { getScrollTriggerBase } from "@shared/config";
+import { getScrollTriggerBase } from "@shared/utils/animations";
 import { Swiper, SwiperSlide, type SwiperClass } from "swiper/react";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
