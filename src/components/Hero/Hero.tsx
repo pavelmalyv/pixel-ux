@@ -13,7 +13,7 @@ interface HeroProps {
 
 const Hero = ({ id, title, actionButton }: HeroProps) => {
   return (
-    <section id={id} className="relative">
+    <section id={id} className="relative overflow-hidden">
       <div className="absolute w-full max-md:w-[140%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 blur-[32px] max-md:blur-[26px]">
         <AnimatedParallaxMouse strength={7}>
           <div className="flex justify-center">

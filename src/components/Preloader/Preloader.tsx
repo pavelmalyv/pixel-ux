@@ -5,7 +5,6 @@ import { useAppSelector } from "@shared/store/hooks";
 import { selectIsLoading } from "@shared/store/loadingPageSlice/loadingPageSlice";
 
 import Image from "@UI/Image/Image";
-import classNames from "classnames";
 
 interface PreloaderProps {
   children: React.ReactNode;
@@ -31,9 +30,8 @@ const Preloader = ({ children }: PreloaderProps) => {
   );
 
   const styles = {
-    base: "overflow-hidden",
     loading: {
-      true: "max-h-screen opacity-0",
+      true: "max-h-screen opacity-0 overflow-hidden",
       false: "",
     },
   };
@@ -64,9 +62,7 @@ const Preloader = ({ children }: PreloaderProps) => {
         </div>
       </div>
 
-      <div className={classNames(styles.base, styles.loading[isLoading ? "true" : "false"])}>
-        {children}
-      </div>
+      <div className={styles.loading[isLoading ? "true" : "false"]}>{children}</div>
     </>
   );
 };
