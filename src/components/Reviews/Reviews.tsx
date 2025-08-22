@@ -4,7 +4,7 @@ import type { HeaderBlock } from "@shared/entities/headerBlock/headerBlock";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import { useCountUp } from "react-countup";
-import { breakpoints } from "@shared/hooks/useMediaTheme/useMediaTheme";
+import { getBreakpoint } from "@shared/utils/breakpoints";
 
 import AvatarGroup from "@UI/AvatarGroup/AvatarGroup";
 import Rating from "@UI/Rating/Rating";
@@ -118,7 +118,7 @@ const Reviews = ({
           <Image
             src={ringImg840}
             srcSet={`${ringImg400} 400w, ${ringImg840} 840w`}
-            sizes={`(max-width: ${breakpoints.md}px) 200px, 420px`}
+            sizes={`(max-width: ${getBreakpoint("maxMd")}px) 200px, 420px`}
             width={1088}
             height={1344}
             className="w-full max-w-105 max-2xl:max-w-90 max-md:max-w-50 app-deco-blend"

@@ -3,7 +3,7 @@ import type { AppImage } from "@shared/entities/appImage/appImage";
 
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import { breakpoints } from "@shared/config";
+import { getBreakpoint } from "@shared/utils/breakpoints";
 
 import gsap from "gsap";
 import ButtonBase from "@UI/ButtonBase/ButtonBase";
@@ -42,7 +42,7 @@ const CasesSlide = ({ actionButton, appImage }: CasesSlideProps) => {
                 <Image
                   {...appImage}
                   className="w-full"
-                  sizes={`(max-width: ${breakpoints.md}px) 59vw, 42vw`}
+                  sizes={`(max-width: ${getBreakpoint("maxMd")}px) 59vw, 42vw`}
                 />
               </div>
             </AnimatedParallaxMouse>

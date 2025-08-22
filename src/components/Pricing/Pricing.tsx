@@ -19,7 +19,7 @@ interface PricingProps {
 }
 
 const Pricing = ({ id, headerBlock, titleButton, actionButton, children }: PricingProps) => {
-  const isLg = useMediaTheme("lg");
+  const isMaxLg = useMediaTheme("maxLg");
   const scrollTriggerId = useId();
   const headerHeight = useAppSelector(selectHeaderHeight);
 
@@ -40,7 +40,7 @@ const Pricing = ({ id, headerBlock, titleButton, actionButton, children }: Prici
                 <SectionHeader
                   {...headerBlock}
                   scrollTriggerId={scrollTriggerId}
-                  isMarginBottom={isLg}
+                  isMarginBottom={isMaxLg}
                   align="left"
                 />
               </div>

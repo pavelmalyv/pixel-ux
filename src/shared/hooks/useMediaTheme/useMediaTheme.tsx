@@ -1,22 +1,19 @@
+import { breakpoints } from "@shared/config";
+import { breakpointsDesktopFirst } from "@shared/config/breakpoints";
+import { getBreakpoint } from "@shared/utils/breakpoints";
 import { useMediaQuery } from "react-responsive";
 
-export const breakpoints = {
-  sm: 640,
-  md: 768,
-  lg: 1024,
-  xl: 1280,
-  "2xl": 1536,
-} as const;
-
-const useMediaTheme = (breakpoint: keyof typeof breakpoints, isMobileFirst: boolean = false) => {
-  const media = {
-    maxWidth: breakpoints[breakpoint] - 1,
+const useMediaTheme = (breakpoint: keyof typeof breakpoints) => {
+  const mediaDesktopFirst = {
+    maxWidth: getBreakpoint(breakpoint),
   };
 
   const mediaMobileFirst = {
-    minWidth: breakpoints[breakpoint],
+    minWidth: getBreakpoint(breakpoint),
   };
 
-  return useMediaQuery(isMobileFirst ? mediaMobileFirst : media);
+  return useMediaQuery(
+    breakpoint in breakpointsDesktopFirst ? mediaDesktopFirst : mediaMobileFirst,
+  );
 };
 export default useMediaTheme;

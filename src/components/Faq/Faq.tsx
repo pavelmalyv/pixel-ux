@@ -17,7 +17,7 @@ interface FaqProps {
 }
 
 const Faq = ({ id, headerBlock, children }: FaqProps) => {
-  const isMediaMaxLg = useMediaTheme("lg");
+  const isMediaMaxLg = useMediaTheme("maxLg");
   const accordionRef = useRef<HTMLDivElement>(null);
   const [timeline, setTimeline] = useState<GSAPTimeline | null>(null);
 
