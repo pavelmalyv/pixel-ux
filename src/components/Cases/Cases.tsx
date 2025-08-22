@@ -2,10 +2,11 @@ import type { HeaderBlock } from "@shared/entities/headerBlock/headerBlock";
 import type { ActionButton } from "@shared/entities/actionButton/actionButton";
 import type { AppImage } from "@shared/entities/appImage/appImage";
 
-import { breakpoints, getScrollTriggerBase } from "@shared/config";
+import { getScrollTriggerBase } from "@shared/config";
 import { Swiper, SwiperSlide, type SwiperClass } from "swiper/react";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
+import { getBreakpoint } from "@shared/utils/breakpoints";
 
 import SectionHeader from "@UI/SectionHeader/SectionHeader";
 import Image from "@UI/Image/Image";
@@ -58,7 +59,7 @@ const Cases = ({ id, headerBlock, slides }: CasesProps) => {
             srcSet={`${raysImg1040} 1040w, ${raysImg1530} 1053w`}
             width={1530}
             height={1568}
-            sizes={`(max-width: ${breakpoints.md}px) 100vw, 764px`}
+            sizes={`(max-width: ${getBreakpoint("maxMd")}px) 100vw, 764px`}
             className="max-w-191 max-xl:max-w-160 max-md:max-w-130 w-full app-deco-blend"
           />
         </div>
@@ -95,13 +96,13 @@ const Cases = ({ id, headerBlock, slides }: CasesProps) => {
             speed={900}
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             breakpoints={{
-              1536: {
+              [getBreakpoint("xxl")]: {
                 slidesPerView: 2.5,
               },
-              1024: {
+              [getBreakpoint("lg")]: {
                 slidesPerView: 2,
               },
-              640: {
+              [getBreakpoint("sm")]: {
                 slidesPerView: 1.5,
               },
             }}

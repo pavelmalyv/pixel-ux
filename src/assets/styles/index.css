@@ -113,7 +113,7 @@
 
 @layer components {
   #root {
-    @apply relative overflow-hidden;
+    @apply relative;
   }
 
   .app-container {

@@ -3,9 +3,8 @@ import type { HeaderBlock } from "@shared/entities/headerBlock/headerBlock";
 
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useCountUp } from "react-countup";
-import { breakpoints } from "@shared/hooks/useMediaTheme/useMediaTheme";
+import { getBreakpoint } from "@shared/utils/breakpoints";
 
 import AvatarGroup from "@UI/AvatarGroup/AvatarGroup";
 import Rating from "@UI/Rating/Rating";
@@ -40,7 +39,7 @@ const Reviews = ({
   reviewsText,
   avatars,
 }: ReviewsProps) => {
-  const containerRef = useRef<HTMLElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const countReviewsRef = useRef<HTMLDivElement>(null);
   const countRatingRef = useRef<HTMLDivElement>(null);
 
@@ -59,7 +58,14 @@ const Reviews = ({
 
   useGSAP(
     () => {
-      const timeline = gsap.timeline();
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: true,
+        },
+      });
 
       timeline.from(".gsap-head", {
         opacity: 0,
@@ -78,28 +84,6 @@ const Reviews = ({
         },
         "-=20%",
       );
-
-      ScrollTrigger.create({
-        trigger: containerRef.current,
-        start: "top top",
-        end: "=+1300",
-        pin: true,
-        scrub: true,
-        anticipatePin: 0.5,
-        animation: timeline,
-      });
-
-      gsap.to(".gsap-image", {
-        top: 0,
-        ease: "none",
-        duration: 0.1,
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start: "top top",
-          end: "+=1300",
-          scrub: true,
-        },
-      });
     },
     { scope: containerRef },
   );
@@ -128,54 +112,54 @@ const Reviews = ({
   }
 
   return (
-    <section
-      ref={containerRef}
-      id={id}
-      className="app-section relative min-h-screen flex items-center"
-    >
-      <div className="gsap-image absolute top-full -translate-y-[80%] bg-bg-primary">
-        <Image
-          src={ringImg840}
-          srcSet={`${ringImg400} 400w, ${ringImg840} 840w`}
-          sizes={`(max-width: ${breakpoints.md}px) 200px, 420px`}
-          width={1088}
-          height={1344}
-          className="w-full max-w-105 max-2xl:max-w-90 max-md:max-w-50 app-deco-blend"
-        />
-      </div>
-
-      <div className="app-container relative">
-        <div className="gsap-head">
-          <SectionHeader {...headerBlock} isAnimated={false} />
+    <section id={id} className="app-section">
+      <div ref={containerRef} className="relative min-h-[calc(100vh_+_--spacing(325))]">
+        <div className="absolute gsap-image top-0 translate-y-[50%] bg-bg-primary">
+          <Image
+            src={ringImg840}
+            srcSet={`${ringImg400} 400w, ${ringImg840} 840w`}
+            sizes={`(max-width: ${getBreakpoint("maxMd")}px) 200px, 420px`}
+            width={1088}
+            height={1344}
+            className="w-full max-w-105 max-2xl:max-w-90 max-md:max-w-50 app-deco-blend"
+          />
         </div>
 
-        <div className="gsap-reviews flex justify-center">
-          <div className="flex md:gap-x-4 p-6 max-md:py-7 max-md:px-4 border border-stroke-secondary rounded-lg bg-bg-secondary max-md:flex-col max-md:items-center max-md:gap-y-6 max-md:w-full max-md:max-w-120">
-            <div className="flex shrink-0">
-              <AvatarGroup>
-                {avatars.map(({ id, appImage }) => (
-                  <AvatarGroup.Item key={id} appImage={appImage} />
-                ))}
-              </AvatarGroup>
+        <div className="sticky top-0 min-h-screen flex items-center">
+          <div className="app-container relative">
+            <div className="gsap-head">
+              <SectionHeader {...headerBlock} isAnimated={false} />
             </div>
 
-            <div className="md:space-y-1 max-md:flex max-md:flex-col max-md:items-center max-md:gap-y-2 max-md:text-center">
-              <div className="text-lg flex justify-center flex-wrap gap-x-2">
-                <div>
-                  <strong>
-                    <AnimatedDigit countRef={countRatingRef} end={rating.toFixed(1)} />
-                  </strong>
-                  <span className="text-text-tertiary">&nbsp;{ratingText + " "}</span>
+            <div className="gsap-reviews flex justify-center">
+              <div className="flex md:gap-x-4 p-6 max-md:py-7 max-md:px-4 border border-stroke-secondary rounded-lg bg-bg-secondary max-md:flex-col max-md:items-center max-md:gap-y-6 max-md:w-full max-md:max-w-120">
+                <div className="flex shrink-0">
+                  <AvatarGroup>
+                    {avatars.map(({ id, appImage }) => (
+                      <AvatarGroup.Item key={id} appImage={appImage} />
+                    ))}
+                  </AvatarGroup>
                 </div>
-                <div>
-                  <strong>
-                    <AnimatedDigit countRef={countReviewsRef} end={reviewsCount} />
-                  </strong>
-                  <span className="text-text-tertiary">&nbsp;{reviewsText}</span>
+
+                <div className="md:space-y-1 max-md:flex max-md:flex-col max-md:items-center max-md:gap-y-2 max-md:text-center">
+                  <div className="text-lg flex justify-center flex-wrap gap-x-2">
+                    <div>
+                      <strong>
+                        <AnimatedDigit countRef={countRatingRef} end={rating.toFixed(1)} />
+                      </strong>
+                      <span className="text-text-tertiary">&nbsp;{ratingText + " "}</span>
+                    </div>
+                    <div>
+                      <strong>
+                        <AnimatedDigit countRef={countReviewsRef} end={reviewsCount} />
+                      </strong>
+                      <span className="text-text-tertiary">&nbsp;{reviewsText}</span>
+                    </div>
+                  </div>
+
+                  <Rating rating={stars} />
                 </div>
               </div>
-
-              <Rating rating={stars} />
             </div>
           </div>
         </div>

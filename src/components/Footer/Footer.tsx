@@ -28,8 +28,8 @@ interface FooterProps {
 
 const Footer = ({ callActionText, developer, menu, socials }: FooterProps) => {
   const { logo } = useLayoutContext();
-  const isMediaMaxLg = useMediaTheme("lg");
-  const isMediaMaxMd = useMediaTheme("md");
+  const isMediaMaxLg = useMediaTheme("maxLg");
+  const isMediaMaxMd = useMediaTheme("maxMd");
 
   let alignMenu: "center" | "left" | "right" = "right";
   if (isMediaMaxMd) {
