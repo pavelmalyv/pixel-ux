@@ -33,9 +33,6 @@ async function enableMocking() {
 
 const root = createRoot(document.getElementById("root")!);
 gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText, Observer);
-ScrollTrigger.config({
-  ignoreMobileResize: false,
-});
 
 enableMocking().then(() => {
   root.render(
