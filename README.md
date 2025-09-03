@@ -17,7 +17,7 @@
 
 ## Стек
 
-React 19, TypeScript, Tailwind CSS, Redux Toolkit, Zod, GSAP, Followbit React, Swiper, MSW, Vite
+React 19, TypeScript, Tailwind CSS, Redux Toolkit, Zod, GSAP, Flowbite React, Swiper, MSW, Vite
 
 ## Запуск
 
