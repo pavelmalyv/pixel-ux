@@ -2,7 +2,7 @@
 
 ![Демонстрация интерфейса](assets/demo.png)
 
-## Возможности
+## Особенности
 
 - Анимации с использованием GSAP
 - Модульная архитектура с использованием паттерна Compound Components
@@ -17,14 +17,14 @@
 
 React 19, TypeScript, Tailwind CSS, Redux Toolkit, Zod, GSAP, Flowbite React, Swiper, MSW, Vite
 
-## Запуск
+## Запуск в режиме разработки
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Сборка
+## Сборка и предпросмотр проекта
 
 ```bash
 npm run build
